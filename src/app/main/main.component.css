@@ -1,9 +1,4 @@
-.badge{
-    padding: 15px;
-    margin: 10px;
-    }
-  
-  .card-header{
+.card-header{
     background-color: black;
     text-align: center;
     font-weight: bold;
@@ -13,6 +8,11 @@
   .card-body{
   background-color:white;
   }
+
+  .badge{
+    padding: 15px;
+    margin: 10px;
+    }
   
   .first {
     background-color: black;

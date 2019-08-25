@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { SearchComponent } from '../search/search.component';
 import { GitServiceService } from '../services/git-service.service';
 import { HttpClient } from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -14,7 +15,7 @@ export class MainComponent implements OnInit {
   repos: any = [];
   userName: string;
 
-  constructor(public gitService: GitServiceService, public http: HttpClient) {
+  constructor(public gitService: GitServiceService, public http: HttpClient, private router:Router) {
 
     this.gitService.getUserDetails().subscribe(users => {
       this.user1 = users;
