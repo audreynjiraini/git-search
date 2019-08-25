@@ -5,10 +5,23 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class GitServiceService {
+  userName: string;
+  apiUrl: string = "https://api.github.com/users/";
+  apiKey: string = "43085be5dd5dc02227ff26beccddea3625b76fe2";
 
-  constructor(public http:HttpClient) { }
+  constructor(public http:HttpClient) {
+    this.userName = "audreynjiraini"
+   }
 
   getUserDetails() {
-    return this.http.get("https://api.github.com/users/audreynjiraini?access_token=43085be5dd5dc02227ff26beccddea3625b76fe2")
+    return this.http.get(this.apiUrl + this.userName + "?access_token=" + this.apiKey);
+  }
+
+  getRepos() {
+    return this.http.get(this.apiUrl + this.userName + "/repositories" + "?access_token" + this.apiKey);
+  }
+
+  searchUser(userName: string) {
+    this.userName = userName;
   }
 }

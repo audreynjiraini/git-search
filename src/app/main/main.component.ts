@@ -16,8 +16,11 @@ export class MainComponent implements OnInit {
 
     this.gitService.getUserDetails().subscribe(users => {
       this.user1 = users;
-      console.log(this.user1.login);
-    })
+      console.log(this.user1);
+    });
+    this.gitService.getRepos().subscribe(result => {
+      this.user1 = result;
+    });
    }
 
   ngOnInit() {
