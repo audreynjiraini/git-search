@@ -10,18 +10,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MainComponent implements OnInit {
 
-  user1:any = [];
+  user1: any = [];
+  repos: any = [];
+  userName: string;
 
-  constructor(public gitService:GitServiceService, public http:HttpClient) {
+  constructor(public gitService: GitServiceService, public http: HttpClient) {
 
     this.gitService.getUserDetails().subscribe(users => {
       this.user1 = users;
       console.log(this.user1);
     });
-    this.gitService.getRepos().subscribe(result => {
-      this.user1 = result;
+    this.gitService.getRepos().subscribe(data => {
+      this.repos = data;
+      console.log(this.user1);
     });
-   }
+  }
 
   ngOnInit() {
   }
