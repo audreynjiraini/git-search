@@ -19,7 +19,7 @@ export class GitServiceService {
   }
 
   getRepos() {
-    return this.http.get(this.apiUrl + this.userName + "/repositories?access_token=" + environment.apiKey);
+    return this.http.get(this.apiUrl + this.userName + "/repos?access_token=" + environment.apiKey);
   }
 
   updateUserName(userName: string) {

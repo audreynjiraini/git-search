@@ -1,10 +1,9 @@
 <div class="container margin">
   <form>
     <div class="form-group">
-      <input class="form-control mr-sm-2 align" type="search" name="userName" placeholder="Search" [(ngModel)]="userName"
+      <input class="form-control align" type="text" name="userName" placeholder="Search" [(ngModel)]="userName"
         (keyup)="findUser()">
-      <br>
-      <button class="btn btn-dark align" type="submit" (click)="findUser(userName)">Search</button>
+      <!-- <button class="btn btn-dark align" type="submit" (click)="findUser(userName)">Search</button> -->
     </div>
   </form>
 </div>

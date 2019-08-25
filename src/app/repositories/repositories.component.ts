@@ -7,8 +7,8 @@ import { GitServiceService } from '../services/git-service.service';
   styleUrls: ['./repositories.component.css']
 })
 export class RepositoriesComponent implements OnInit {
-  user1: any = [];
-  repos: any = [];
+  user1;
+  repos;
   userName: string;
 
   constructor(public gitService: GitServiceService) {

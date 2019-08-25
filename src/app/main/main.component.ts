@@ -11,8 +11,8 @@ import {Router} from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  user1: any = [];
-  repos: any = [];
+  user1;
+  repos;
   userName: string;
 
   constructor(public gitService: GitServiceService, public http: HttpClient, private router:Router) {
