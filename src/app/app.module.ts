@@ -2,12 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule} from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { GitServiceService } from './services/git-service.service';
-import { SearchComponent } from './search/search.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
@@ -16,10 +17,10 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
   declarations: [
     AppComponent,
     MainComponent,
-    SearchComponent,
+    SearchFormComponent,
     NotFoundComponent,
     RepositoriesComponent,
-    DateAgoPipe
+    DateAgoPipe,
   ],
   imports: [
     BrowserModule,

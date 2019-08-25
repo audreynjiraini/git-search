@@ -1,31 +1,33 @@
-<app-search></app-search>
+<body>
+    <div class="container">
+        <app-search></app-search>
 
-<div class="container">
-    <div class="card" *ngIf="user1">
-        <div class="card-header">
-            <h3>{{user1.name}}</h3>
-        </div>
+        <div class="card" *ngIf="user1">
+            <div class="card-header">
+                <h3 class="bold">{{user1.name.toUpperCase()}}.</h3>
+            </div>
 
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-4">
-                    <img class="img-thumbnail" src="{{user1.avatar_url}}">
-                </div>
-                <div class="col-md-8">
-                    <div class="first">
-                        <span class="badge">{{user1.public_repos}} Public Repositories</span>
-                        <span class="badge">{{user1.followers}} Followers</span>
-                        <span class="badge">{{user1.following}} Following</span>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-thumbnail" src="{{user1.avatar_url}}">
                     </div>
-                    <ul class="list-group">
-                        <li class="list-group-item">Username: {{user1.login}}</li>
-                        <li class="list-group-item" *ngIf="email">Email: {{user1.email}}</li>
-                        <li class="list-group-item">Joined on: {{user1.created_at|dateAgo}}</li>
-                        <li class="list-group-item">Link to Github: <a href="{{user1.html_url}}"
-                                target="_blank">{{user1.html_url}}</a></li>
-                    </ul>
+                    <div class="col-md-8">
+                        <div class="first">
+                            <span class="badge">{{user1.public_repos}} Public Repositories</span>
+                            <span class="badge">{{user1.followers}} Followers</span>
+                            <span class="badge">{{user1.following}} Following</span>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><b>Username: </b>{{user1.login}}</li>
+                            <li class="list-group-item" *ngIf="email"><b>Email: </b>{{user1.email}}</li>
+                            <li class="list-group-item"><b>Joined: </b>{{user1.created_at|dateAgo}}</li>
+                            <li class="list-group-item"><b>Link to Github: </b><a href="{{user1.html_url}}"
+                                    target="_blank">{{user1.html_url}}</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>

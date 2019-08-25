@@ -1,9 +1,12 @@
 .card-header{
     background-color: black;
     text-align: center;
-    font-weight: bold;
     color: white;
   }
+
+.bold {
+  font-weight: bold;
+}
   
   .card-body{
   background-color:white;

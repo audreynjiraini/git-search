@@ -1,21 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-// import { SearchFormComponent } from '../search/search.component';
+import { MainComponent } from '../main/main.component';
 import { GitServiceService } from '../services/git-service.service';
-import { HttpClient } from '@angular/common/http';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  selector: 'app-search',
+  templateUrl: './search-form.component.html',
+  styleUrls: ['./search-form.component.css']
 })
-export class MainComponent implements OnInit {
-
+export class SearchFormComponent implements OnInit {
   user1;
   repos;
   userName: string;
 
-  constructor(public gitService: GitServiceService, public http: HttpClient, private router:Router) {
+  constructor(public gitService: GitServiceService, private router: Router) {
 
     this.gitService.getUserDetails().subscribe(users => {
       this.user1 = users;
@@ -27,9 +25,9 @@ export class MainComponent implements OnInit {
     });
   }
 
-    findUser(){
-      this.gitService.updateUserName(this.userName);
-      this.gitService.getUserDetails().subscribe(users => {
+  findUser() {
+    this.gitService.updateUserName(this.userName);
+    this.gitService.getUserDetails().subscribe(users => {
       this.user1 = users;
       console.log(this.user1);
     });
@@ -40,6 +38,8 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
 }
+
