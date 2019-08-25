@@ -17,6 +17,7 @@
 </nav>
 
 <app-search></app-search>
+<router-outlet></router-outlet>
 
 <div class="container">
     <div class="card">
@@ -38,7 +39,7 @@
                     <ul class="list-group">
                         <li class="list-group-item">Username: {{user1.login}}</li>
                         <li class="list-group-item" *ngIf="email">Email: {{user1.email}}</li>
-                        <li class="list-group-item">Joined on: {{user1.created_at|date}}</li>
+                        <li class="list-group-item">Joined on: {{user1.created_at|dateAgo}}</li>
                         <li class="list-group-item">Link to Github: <a href="{{user1.html_url}}"
                                 target="_blank">{{user1.html_url}}</a></li>
                     </ul>

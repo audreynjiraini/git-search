@@ -9,13 +9,17 @@ import { MainComponent } from './main/main.component';
 import { GitServiceService } from './services/git-service.service';
 import { SearchComponent } from './search/search.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     SearchComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    RepositoriesComponent,
+    DateAgoPipe
   ],
   imports: [
     BrowserModule,
