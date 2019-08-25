@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchComponent } from '../search/search.component';
+// import { SearchComponent } from '../search/search.component';
 import { GitServiceService } from '../services/git-service.service';
 import { HttpClient } from '@angular/common/http';
 

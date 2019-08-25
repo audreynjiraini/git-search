@@ -25,6 +25,7 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [GitServiceService],
   bootstrap: [AppComponent]

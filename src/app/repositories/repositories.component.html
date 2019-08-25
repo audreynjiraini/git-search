@@ -1,1 +1,18 @@
-<p>repositories works!</p>
+<div class="card">
+    <div class="card-header">
+        <h3>{{user1.login}} 's repositories</h3>
+    </div>
+    <div class="card-body">
+        <div class="row" *ngFor='let repo of repos, let i=index'>
+            <div class="col-md-4">
+                {{repos[i].name}}
+            </div>
+            <div class="col-md-4">
+                {{repos[i].pushed_at| dateAgo}}
+            </div>
+            <div class="col-md-4">
+                {{repos[i].forks_count}}
+            </div>
+        </div>
+    </div>
+</div>
