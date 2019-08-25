@@ -9,7 +9,7 @@ import {  RepositoriesComponent} from './repositories/repositories.component';
 const routes: Routes = [
   { path: 'mygithub', component: MainComponent },
   { path: 'repositories', component: RepositoriesComponent },
-  // { path: '', redirectTo:"/mygithub", pathMatch:"full"},
+  { path: '', redirectTo:"/mygithub", pathMatch:"full"},
   // { path:'**', component:NotFoundComponent},
 ];
 
