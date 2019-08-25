@@ -20,9 +20,21 @@ export class MainComponent implements OnInit {
       this.user1 = users;
       console.log(this.user1);
     });
-    this.gitService.getRepos().subscribe(data => {
-      this.repos = data;
+    this.gitService.getRepos().subscribe(result => {
+      this.repos = result;
+      console.log(this.repos);
+    });
+  }
+
+    findUser(){
+      this.gitService.updateUserName(this.userName);
+      this.gitService.getUserDetails().subscribe(users => {
+      this.user1 = users;
       console.log(this.user1);
+    });
+    this.gitService.getRepos().subscribe(result => {
+      this.repos = result;
+      console.log(this.repos);
     });
   }
 
