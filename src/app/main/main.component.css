@@ -1,0 +1,21 @@
+.badge{
+    padding: 15px;
+    margin: 10px;
+    }
+  
+  .card-header{
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .card-body{
+  background-color:white;
+  }
+  
+  .first {
+    background-color: black;
+    text-align: center;
+    color: white;
+  }
