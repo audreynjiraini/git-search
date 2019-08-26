@@ -1,5 +1,5 @@
 <div class="container">
-    <app-search></app-search>
+    <app-search (search)="findUser($event)"></app-search>
 
     <div class="card" *ngIf="user1">
         <div class="card-header">
