@@ -26,3 +26,8 @@
   .align {
     text-align: center;
   }
+
+  .btn-inline {
+    color:black;
+    font-weight: bold;
+}
