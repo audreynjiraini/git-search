@@ -13,14 +13,17 @@ export class GitServiceService {
   apiUrl: string = "https://api.github.com/users/";
 
   constructor(public http:HttpClient) {
-     this.userNames = new Users ("","","",0,new Date)
+     this.userNames = new Users ("",0,0,"","","",0,new Date())
    }
 
   getUserDetails(userName:string) {
     interface users{
       login:string;
       avatar_url: string;
-      email: string;
+      name:string,
+      followers:number,
+      following:number,
+      html_url:string,
       public_repos: number;
       created_at: Date;
     }

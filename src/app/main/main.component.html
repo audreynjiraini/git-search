@@ -20,7 +20,6 @@
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item"><b>Username: </b>{{user1.login}}</li>
-                            <li class="list-group-item" *ngIf="email"><b>Email: </b>{{user1.email}}</li>
                             <li class="list-group-item"><b>Joined: </b>{{user1.created_at|dateAgo}}</li>
                             <li class="list-group-item"><b>Link to Github: </b><a href="{{user1.html_url}}"
                                     target="_blank">{{user1.html_url}}</a></li>
