@@ -13,26 +13,26 @@ export class RepositoriesComponent implements OnInit {
 
   constructor(public gitService: GitServiceService) {
 
-    this.gitService.getUserDetails().subscribe(users => {
-      this.user1 = users;
-      console.log(this.user1);
-    });
-    this.gitService.getRepos().subscribe(result => {
-      this.repos = result;
-      console.log(this.repos);
-    });
+    // this.gitService.getUserDetails().subscribe(users => {
+    //   this.user1 = users;
+    //   console.log(this.user1);
+    // });
+    // this.gitService.getRepos().subscribe(result => {
+    //   this.repos = result;
+    //   console.log(this.repos);
+    // });
   }
 
     findUser(){
-      this.gitService.updateUserName(this.userName);
-      this.gitService.getUserDetails().subscribe(users => {
-      this.user1 = users;
-      console.log(this.user1);
-    });
-    this.gitService.getRepos().subscribe(result => {
-      this.repos = result;
-      console.log(this.repos);
-    });
+    //   this.gitService.updateUserName(this.userName);
+    //   this.gitService.getUserDetails().subscribe(users => {
+    //   this.user1 = users;
+    //   console.log(this.user1);
+    // });
+    // this.gitService.getRepos().subscribe(result => {
+    //   this.repos = result;
+    //   console.log(this.repos);
+    // });
   }
 
   ngOnInit() {

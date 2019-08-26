@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { SearchFormComponent } from '../search/search.component';
+import {Users} from '../users'
 import { GitServiceService } from '../services/git-service.service';
-import { HttpClient } from '@angular/common/http';
-import {Router} from '@angular/router';
+import { Repos } from '../repos';
 
 @Component({
   selector: 'app-main',
@@ -11,35 +10,35 @@ import {Router} from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  user1;
-  repos;
-  userName: string;
+  user1: Users;
+  repos: Repos;
+  
 
-  constructor(public gitService: GitServiceService, public http: HttpClient, private router:Router) {
-
-    this.gitService.getUserDetails().subscribe(users => {
-      this.user1 = users;
-      console.log(this.user1);
-    });
-    this.gitService.getRepos().subscribe(result => {
-      this.repos = result;
-      console.log(this.repos);
-    });
+  constructor( public gitService: GitServiceService) {
   }
 
-    findUser(){
-      this.gitService.updateUserName(this.userName);
-      this.gitService.getUserDetails().subscribe(users => {
-      this.user1 = users;
-      console.log(this.user1);
-    });
-    this.gitService.getRepos().subscribe(result => {
-      this.repos = result;
-      console.log(this.repos);
-    });
-  }
+    findUser(userName){
+    this.gitService.getUserDetails(userName).then(
+      ()=>{
+        this.user1 = this.gitService.userNames;
+        console.log(this.gitService.userNames);
+      },
+      (error)=>{
+        console.log(error);
+      });
+      this.gitService.allRepos(userName).then(
+        (results)=>{
+          this.repos = this.gitService.Repositories
+          console.log(this.repos);
+        },
+        (error)=>{
+          console.log(error);
+        }
+      );
+   }
 
   ngOnInit() {
+    this.findUser("audreynjiraini")
   }
 
 }

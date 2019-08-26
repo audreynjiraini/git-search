@@ -1,10 +1,10 @@
 <body>
     <div class="container">
-        <app-search></app-search>
+        <app-search (search)="findUser($event)"></app-search>
 
         <div class="card" *ngIf="user1">
             <div class="card-header">
-                <h3 class="bold">{{user1.name.toUpperCase()}}.</h3>
+                <h3 class="bold">{{user1.name}}.</h3>
             </div>
 
             <div class="card-body">
@@ -29,5 +29,14 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="card" *ngFor = "let repo of repos">
+                <div class="card-body">
+                    {{repo.name}}
+                </div>
+            </div>
+        </div>
+
+        
     </div>
 </body>

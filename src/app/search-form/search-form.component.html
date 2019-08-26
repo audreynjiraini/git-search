@@ -1,7 +1,8 @@
 <div class="container">
   <form class="form">
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="userName" name="userName" (keyup)="findUser()">
-    </div>
+      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="userName" name="userName">
+        </div>
+        <button class="btn btn-primary" (click)="findUser()"> Search</button>
   </form>
 </div>
