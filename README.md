@@ -1,7 +1,7 @@
 # GitSearch
 This is a website which allows users to enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories.
 
-#### 17 August 2019
+#### 24 August 2019
 By Audrey Njiraini
 
 ## Setup/Installation Requirements
