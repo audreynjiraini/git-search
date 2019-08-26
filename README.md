@@ -14,7 +14,7 @@ If you need clarification on any aspect, feel free to reach me on my email at au
 MIT License
 Copyright (c) 2019 Audrey Njiraini
 
-##Angular Information
+## Angular Information
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server
